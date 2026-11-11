@@ -39,6 +39,12 @@
       </item>
       <item>
        <widget class="QPushButton" name="View_Button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="text">
          <string>View</string>
         </property>
