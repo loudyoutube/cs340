@@ -21,12 +21,43 @@ SignUp::~SignUp()
 void SignUp::on_YesButton_clicked()
 {
     this->over18 = true;
+
+
+    QPalette palYes = ui->YesButton->palette();
+    QPalette palNo = ui->NoButton->palette();
+
+    this->over18 = true;
+    palYes.setColor(QPalette::Button, QColor("#005500"));
+    palNo.setColor(QPalette::Button, QColor("#aa0000"));
+
+    ui->YesButton->setAutoFillBackground(true);
+    ui->YesButton->setPalette(palYes);
+    ui->YesButton->update();
+
+    ui->NoButton->setAutoFillBackground(true);
+    ui->NoButton->setPalette(palNo);
+    ui->NoButton->update();
 }
 
 
 void SignUp::on_NoButton_clicked()
 {
     this->over18 = false;
+
+
+    QPalette palYes = ui->YesButton->palette();
+    QPalette palNo = ui->NoButton->palette();\
+
+        palYes.setColor(QPalette::Button, QColor("#aaf500"));
+    palNo.setColor(QPalette::Button, QColor("#550000"));
+
+    ui->YesButton->setAutoFillBackground(true);
+    ui->YesButton->setPalette(palYes);
+    ui->YesButton->update();
+
+    ui->NoButton->setAutoFillBackground(true);
+    ui->NoButton->setPalette(palNo);
+    ui->NoButton->update();
 }
 
 
